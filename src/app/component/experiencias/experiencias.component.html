@@ -1,19 +1,12 @@
 <div class="experiencias">
 	<h1>Experiencias</h1>
-	<div class="item-experiencia">
-		<img class="caja-imagen" src="./assets/img/mun-areco.jpg">
+	<div class="item-experiencia" *ngFor="let exp of experiencia">
+		<img class="caja-imagen" src="{{exp.imagen}}">
 		<div class="caja">
-			<h2 class="caja-subtitulo">Municipalidad de San Antonio de Areco</h2>
-			<p class="caja-detalle">Mayo 2013 - Actualidad</p>
-			<p class="caja-contenido">Operador de centro de monitoreo. Mantenimiento correctivo de enlaces de radiofrecuencia, de camaras ip y de PC.</p>
+			<h2 class="caja-subtitulo">{{exp.trabajo}}</h2>
+			<p class="caja-detalle">{{exp.fechaInicio}} - {{exp.fechaFinal}}</p>
+			<p class="caja-contenido">{{exp.puesto}}</p>
 		</div>
-	</div>
-	<div class="item-experiencia">
-		<img class="caja-imagen" src="./assets/img/permont.png">
-		<div class="caja">
-			<h2 class="caja-subtitulo">Seguridad Permont</h2>
-			<p class="caja-detalle">Febrero 2010 - Mayo 2010</p>
-			<p class="caja-contenido">Instalador de sistemas de alarmas, camaras de vigilancia, domotica.</p>
-		</div>
+		<img class="panel" src="./assets/img/edit.png" >
 	</div>
 </div>

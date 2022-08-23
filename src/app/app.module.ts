@@ -11,9 +11,7 @@ import { ExperienciasComponent } from './component/experiencias/experiencias.com
 import { SkillComponent } from './component/skill/skill.component';
 import { ProyectosComponent } from './component/proyectos/proyectos.component';
 import { FooterComponent } from './component/footer/footer.component';
-import { ProyectoComponent } from './dialogos/proyecto/proyecto.component';
-import { EducacionComponent } from './dialogos/educacion/educacion.component';
-import { ExperienciaComponent } from './dialogos/experiencia/experiencia.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,13 +24,11 @@ import { ExperienciaComponent } from './dialogos/experiencia/experiencia.compone
     ExperienciasComponent,
     SkillComponent,
     ProyectosComponent,
-    FooterComponent,
-    ProyectoComponent,
-    EducacionComponent,
-    ExperienciaComponent,
+    FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

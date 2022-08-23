@@ -15,7 +15,7 @@ export class PerfilComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.perfilService.getperfil().subscribe(data => this.perfil = data);
+    this.perfilService.getPerfil().subscribe(data => this.perfil = data[0]);
   }
 
   onLogout() {

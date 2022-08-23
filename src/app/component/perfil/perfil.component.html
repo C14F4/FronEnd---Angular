@@ -1,7 +1,7 @@
 <div class="perfil">
-	<img class="imagen-biografia" [src]="perfil.fotoPerfil">
+	<img class="imagen-biografia" [src]="perfil.fotoBanner">
 	<div class="perfil-imagen">
-		<img [src]="perfil.fotoBanner">
+		<img [src]="perfil.fotoPerfil">
 	</div>
 	<div class="perfil-detalles">
 		<img class="panel" src="./assets/img/edit.png">
@@ -9,4 +9,8 @@
 		<p>{{perfil.profesion}}</p>
 		<p>{{perfil.lugar}}</p>
 	</div>
+</div>
+<div class="acerca">
+	<h1 class="caja-subtitulo">Acerca de</h1>
+	<p class="caja-detalle">{{perfil.acercaDe}}</p>
 </div>

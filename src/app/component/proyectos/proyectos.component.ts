@@ -1,6 +1,7 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import {Proyecto} from 'src/app/model/proyecto';
+import { Component, OnInit } from '@angular/core';
+import { Proyecto } from '../../model/proyecto';
+import { ProyectoService } from '../../service/proyecto.service';
+
 
 @Component({
   selector: 'app-proyectos',
@@ -8,8 +9,14 @@ import {Proyecto} from 'src/app/model/proyecto';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
+  proyecto: Proyecto[] = [];
 
-  constructor(){}
-  ngOnInit() {
+  constructor(
+    public proyectoService: ProyectoService,
+  ) { }
+
+  ngOnInit(): void {
+    this.proyectoService.getProyecto().subscribe(data => this.proyecto = data);
   }
+
 }

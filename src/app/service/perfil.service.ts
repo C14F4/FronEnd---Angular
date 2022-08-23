@@ -12,7 +12,7 @@ export class PerfilService {
 
   constructor(private http: HttpClient) { }
 
-  public getperfil(): Observable<Perfil> {
+  public getPerfil(): Observable<Perfil> {
     return this.http.get<Perfil>(this.URL+ 'ver');
   }
 

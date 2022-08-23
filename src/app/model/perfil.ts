@@ -1,11 +1,11 @@
 export class Perfil {
     id: Number;
-    nombreApellido: string;
-    profesion: string;
-    lugar: string;
-    fotoBanner: string;
-    fotoPerfil: string;
-    acercaDe: string;
+    nombre: String;
+    profesion: String;
+    lugar: String;
+    fotoBanner: String;
+    fotoPerfil: String;
+    acercaDe: String;
     redFb: String; 
     redTw: String; 
     redIg: String; 
@@ -13,17 +13,17 @@ export class Perfil {
     
 
     constructor(id: Number,
-                nombreApellido: string,
-                profesion: string,
-                lugar: string,
-                fotoBanner: string,
-                fotoPerfil: string,
-                acercaDe: string,
+                nombre: String,
+                profesion: String,
+                lugar: String,
+                fotoBanner: String,
+                fotoPerfil: String,
+                acercaDe: String,
                 redFb: String,
                 redTw: String,
                 redIg: String,
                 redGit : String) {
-        this.nombreApellido = nombreApellido;
+        this.nombre = nombre;
         this.profesion = profesion;
         this.lugar = lugar;
         this.fotoBanner = fotoBanner;
