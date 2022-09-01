@@ -1,7 +1,9 @@
 <div class="proyectos">
+	<button class="botones-crear-nuevo" mat-button (click)="nuevoProyecto()">Nuevo proyecto</button>
 	<h1>Proyectos</h1>
+	<br>
 	<ul class="item-proyecto">
-		<div *ngFor="let pro of proyecto">
+		<div *ngFor="let pro of proyecto; let i = index">
 			<li id="proyeto1">
 				<img src="{{pro.imagen}}" alt="">
 				<div id="info-proyecto1" class="descripcion-proyecto">
@@ -11,7 +13,7 @@
 					<a href="{{pro.linkDemo}}" class="boton">Demo</a>
 				</div>
 			</li>
-			<img class="panel" src="./assets/img/edit.png" >
+			<img class="panel" src="./assets/img/edit.png" (click)="abrirDialogo4(i)" >
 		</div>
 	</ul>
 	

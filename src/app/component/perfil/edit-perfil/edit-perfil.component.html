@@ -1,0 +1,44 @@
+<div>
+    <h1 mat-dialog-title>Perfil</h1>
+    <div mat-dialog-content>
+        <div style="display: flex;flex-direction: column; margin:1rem auto; max-width: 600px; min-width: 300px; padding: 1rem;">
+
+            <mat-form-field>
+                <input matInput [(ngModel)]="data.nombre" type="text" placeholder="Ingrese Institucion">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput [(ngModel)]="data.profesion" type="text" placeholder="Ingrese Titulo">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput [(ngModel)]="data.lugar" type="text" placeholder="Ingrese fecha de inicio">
+            </mat-form-field>
+			
+			<mat-form-field>
+                <input matInput [(ngModel)]="data.redFb" type="text" placeholder="Ingrese fecha de finalizacion">
+            </mat-form-field>
+			
+			<mat-form-field>
+                <input matInput [(ngModel)]="data.redTw" type="text" placeholder="Ingrese fecha de finalizacion">
+            </mat-form-field>
+			
+			<mat-form-field>
+                <input matInput [(ngModel)]="data.redIg" type="text" placeholder="Ingrese fecha de finalizacion">
+            </mat-form-field>
+			
+			<mat-form-field>
+                <input matInput [(ngModel)]="data.redGit" type="text" placeholder="Ingrese fecha de finalizacion">
+            </mat-form-field>
+			
+			<mat-form-field>
+                <input matInput [(ngModel)]="data.acercaDe" type="text" placeholder="Ingrese link de imagen">
+            </mat-form-field>
+
+        </div>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="cancelar()">Cancelar</button>
+        <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Confirmar</button>
+    </div>
+</div>

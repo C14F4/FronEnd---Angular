@@ -4,7 +4,7 @@
 		<img [src]="perfil.fotoPerfil">
 	</div>
 	<div class="perfil-detalles">
-		<img class="panel" src="./assets/img/edit.png">
+		<img class="panel" src="./assets/img/edit.png" (click)="abrirDialogoPerfil()">
 		<h1>{{perfil.nombre}}</h1>
 		<p>{{perfil.profesion}}</p>
 		<p>{{perfil.lugar}}</p>

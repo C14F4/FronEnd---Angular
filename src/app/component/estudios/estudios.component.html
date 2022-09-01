@@ -1,12 +1,14 @@
 <div class="estudios">
+	<button class="botones-crear-nuevo" mat-button (click)="nuevoEstudio()">Nuevo estudio</button>
 	<h1>Estudios</h1>
-	<div class="item-estudio" *ngFor="let est of estudios">
+	<br>
+	<div class="item-estudio" *ngFor="let est of estudios; let i = index">
 		<img class="caja-imagen" src="{{est.imagen}}">
 		<div class="caja">
 			<h2 class="caja-subtitulo">{{est.instituto}}</h2>
 			<p class="caja-detalle">{{est.titulo}}</p>
 			<p class="caja-contenido">({{est.fechaInicio}} - {{est.fechaFinal}})</p>
 		</div>
-		<img class="panel" src="./assets/img/edit.png" >
+		<img class="panel" src="./assets/img/edit.png" (click)="abrirDialogo(i)">
 	</div>
 </div>

@@ -16,8 +16,12 @@ export class SkillService {
     return this.http.get<Skill[]>(this.URL+ 'ver');
   }
 
-  public saveSkill(item: Skill): Observable<any> {
-    return this.http.post<any>(this.URL + 'edit', item);
+  public newSkill(item: Skill): Observable<any> {
+    return this.http.post<any>(this.URL + 'crear', item);
+  }
+  
+    public saveSkill(item: Skill): Observable<any> {
+    return this.http.put<any>(this.URL + 'edit', item);
   }
 
   public deleteSkill(item: Number): Observable<any> {

@@ -16,8 +16,8 @@ export class PerfilService {
     return this.http.get<Perfil>(this.URL+ 'ver');
   }
 
-  public save(perfil: Perfil): Observable<any> {
-    return this.http.post<any>(this.URL + 'edit', perfil);
+  public savePerfil(perfil: Perfil): Observable<any> {
+    return this.http.put<any>(this.URL + 'edit', perfil);
   }
 
   }

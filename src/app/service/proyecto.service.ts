@@ -16,8 +16,12 @@ export class ProyectoService {
     return this.http.get<Proyecto[]>(this.URL+ 'ver');
   }
 
-  public saveProyecto(item: Proyecto): Observable<any> {
-    return this.http.post<any>(this.URL + 'edit', item);
+  public newProyecto(item: Proyecto): Observable<any> {
+    return this.http.post<any>(this.URL + 'crear', item);
+  }
+  
+   public saveProyecto(item: Proyecto): Observable<any> {
+    return this.http.put<any>(this.URL + 'edit', item);
   }
 
   public deleteProyecto(item: Number): Observable<any> {

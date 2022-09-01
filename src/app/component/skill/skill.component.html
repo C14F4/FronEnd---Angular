@@ -1,7 +1,10 @@
 <div class="skill">
+	<button class="botones-crear-nuevo" mat-button (click)="nuevoSkill()">Nuevo skill</button>
 	<h1>Skill</h1>
+	<br>
 	<ul class="contenedor-skill">
-		<li class="item-skill" *ngFor="let s of skill">
+		<li class="item-skill" *ngFor="let s of skill; let i = index">
+			<img id="edit-skill" class="panel" src="./assets/img/edit.png" (click)="abrirDialogoSkill(i)">
 			<img src="{{s.imagen}}" alt="html" class="img-skill">
 			<p>{{s.nombre}}</p>
 			<progress  max="100" value="{{s.porcentaje}}"></progress>

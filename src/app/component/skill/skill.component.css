@@ -1,0 +1,16 @@
+#edit-skill {
+    opacity: 0;
+    visibility:hidden;
+}
+
+.item-skill:hover > #edit-skill {
+    opacity: 1;
+    visibility:visible;
+}
+
+.botones-crear-nuevo {
+	margin: 3px;
+	border: 1px solid grey;
+    border-radius: 10px;
+	float: right;
+}
