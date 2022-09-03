@@ -120,6 +120,7 @@ li button{
     border-radius: 10px;
     color: grey;
     padding: 5px;
+	vertical-align: bottom;
 }
 
 li button:hover {
