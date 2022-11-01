@@ -1,0 +1,36 @@
+<div id="fbody">
+    
+        <div id="contenedor">
+            
+            <div id="contenedorcentrado">
+                <div id="login">
+                    <form id="loginform" [formGroup]="form" (ngSubmit)="login($event)">
+                        <label for="usuario">Email</label>
+                        <input id="usuario" formControlName="username" type="text" name="username" placeholder="Email" required>
+                        
+                        <label for="password">Contraseña</label>
+                        <input id="password" formControlName="password" type="password" placeholder="Contraseña" name="password" required>
+                        
+                        <button type="submit" title="Ingresar" name="Ingresar" >Login</button>
+                    </form>
+                    
+                </div>
+                <div id="derecho">
+                    <div class="titulo">
+                        Bienvenido
+                    </div>
+                    <hr>
+                    <div class="pie-form">
+                        <p>Portfolio de Juan Carlos Ciafardini</p>
+						<p>Proyecto final de Argentina Programa 2022</p>
+                        <hr>
+                        <p>User : info@ciafa.com.ar</p>
+						<p>Password : 123456</p>
+						<hr>
+						<p><a href="./home">Ir al portfolio</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>

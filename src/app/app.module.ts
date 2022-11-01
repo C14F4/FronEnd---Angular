@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module'; //agregado manualmente
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import { HomeComponent } from './component/home/home.component';
@@ -28,6 +30,11 @@ import { EditExperienciasComponent } from './component/experiencias/edit-experie
 import { EditProyectoComponent } from './component/proyectos/edit-proyecto/edit-proyecto.component';
 import { EditPerfilComponent } from './component/perfil/edit-perfil/edit-perfil.component';
 import { EditSkillComponent } from './component/skill/edit-skill/edit-skill.component';
+import { LoginComponent } from './component/login/login.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService } from './service/interceptor.service';
+
+import {ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -49,19 +56,22 @@ import { EditSkillComponent } from './component/skill/edit-skill/edit-skill.comp
     EditExperienciasComponent,
     EditProyectoComponent,
     EditPerfilComponent,
-    EditSkillComponent
+    EditSkillComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+	AppRoutingModule, // routing manual
 	BrowserAnimationsModule, // dialog
 	MatInputModule,
     MatButtonModule,
     MatDialogModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+	ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}],
   bootstrap: [AppComponent],
   entryComponents: [
     EditEstudiosComponent,// <--- Aquí
