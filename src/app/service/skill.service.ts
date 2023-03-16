@@ -8,7 +8,7 @@ import { Skill } from '../model/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  URL = 'https://ap-portfolio-c14f4.herokuapp.com/skill/';
+  URL = 'https://ap-portfolio-c14f4.onrender.com/skill/';
 
   constructor(private http: HttpClient) { }
 

@@ -8,7 +8,7 @@ import { Proyecto } from '../model/proyecto';
   providedIn: 'root'
 })
 export class ProyectoService {
-  URL = 'https://ap-portfolio-c14f4.herokuapp.com/proyectos/';
+  URL = 'https://ap-portfolio-c14f4.onrender.com/proyectos/';
 
   constructor(private http: HttpClient) { }
 

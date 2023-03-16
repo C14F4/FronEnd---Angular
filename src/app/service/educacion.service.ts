@@ -8,7 +8,7 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = 'https://ap-portfolio-c14f4.herokuapp.com/educacion/';
+  URL = 'https://ap-portfolio-c14f4.onrender.com/educacion/';
 
   constructor(private http: HttpClient) { }
 

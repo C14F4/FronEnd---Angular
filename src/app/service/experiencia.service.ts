@@ -8,7 +8,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  URL = 'https://ap-portfolio-c14f4.herokuapp.com/experiencia/';
+  URL = 'https://ap-portfolio-c14f4.onrender.com/experiencia/';
 
   constructor(private http: HttpClient) { }
 
